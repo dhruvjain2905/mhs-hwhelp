@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<center>
+    <br>
+    <br>
+    <h1 align="center" style="color: white;"class="display-3">Welcome!</h1>
+    
+    <style>
+    body {background-color: #d3e7ff;}
+    </style>
+    <br/>
+    <br/>
+    <div class="row no-gutters bg-light position-relative">
+        <div class="col-md-6 mb-md-0 p-md-4">
+          <img src="https://h-o-m-e.org/wp-content/uploads/2022/04/Blank-Profile-Picture-1.jpg" class="w-100">
+        <!--https://st2.depositphotos.com/1518767/7635/i/950/depositphotos_76352761-stock-photo-overhead-shot-of-laptop-and.jpg-->
+        </div>
+        <div class="col-md-6 position-static p-4 pl-md-0">
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+          <h5  class = "display-5" style="color: white;">{{current_user.name}}</h5>
+          <h6  class = "display-6" style="color: white;">Points : 0</h6>
+          <br>
+          <a href="/home" class="button button1">View Answered Questions</a>
+          <a href="/ask" class="button button1">Ask a Question</a>
+          <br>
+        <br>
+          {% if current_user.expert %}
+          <a href="/unanswered" class="button button1">Questions for Me</a>
+          {%endif%}
+        </div>
+      </div>
+    
+
+  
+
+
+      <style>
+[class|="col-md-6 position-static p-4 pl-md-0"]{
+  background-color: #4e5d6c;
+  transition: 0.3s;
+}
+
+[class|="col-md-6 mb-md-0 p-md-4"]{
+  background-color: #4e5d6c;
+  transition: 0.3s;
+}
+
+        body {
+  background-color: black;
+}
+
+.button {
+  background-color:#00bb19; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #00bb19;
+  color: white; 
+
+}
+
+.button1:hover {
+  background-color: #ffffff;
+  color: #00bb19;
+}
+</style>
+
+{% endblock %}

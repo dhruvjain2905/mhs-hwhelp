@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %}Question{% endblock %}
+
+{% block content %}
+<!--<div class="jumbotron">
+        <h1>{{ question.question }}</h1>
+        <p>{{ question.answer }}</p>
+        <p><a class="btn btn-primary btn-lg">Asked By: {{ question.asker.name }}</a></p>
+        <p><a class="btn btn-primary btn-lg">Answered By: {{ question.expert.name }}</a></p>
+      </div>
+    -->
+
+<br>
+<br>
+
+      <div class="card">
+        <center><h1 class="card-header">{{ question.question }}</h1></center>
+        <div class="card-body">
+          <center><h5 class="card-title">{{ question.answer }}</h5></center>
+          <br>
+<center>
+          <h6 class="card-text">Asked By:{{question.asker.name}}</h6>
+          <h6 class="card-text">Answered By:{{question.expert.name}}</h6>
+          <a href="{{ url_for('main.home') }}" class="button button1">Back</a>
+        {%if question.image_data%}
+          <a href="{{ url_for('main.download', question_id=question.id) }}" class="button button1">Download Question File</a>
+        {%endif%}
+        {%if question.ans_data%}
+          <a href="{{ url_for('main.ans_download', question_id=question.id) }}" class="button button1">Download Answer File</a>
+        {%endif%} 
+        </center>
+        </div>
+      </div>
+
+
+
+      <style>
+
+        [class|="card-header"]{
+          background-color: #00bb19;
+        }
+
+        body {
+          background-color: black;
+        }
+        [class|="card-body"]{
+          background-color:  #4e5d6c;
+          color: white;
+        }
+
+
+        .button {
+  background-color:#00bb19; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #00bb19;"
+  color: black; 
+
+}
+
+.button1:hover {
+  background-color: #ffffff;
+  color: #00bb19;
+}
+        </style>
+{% endblock %}

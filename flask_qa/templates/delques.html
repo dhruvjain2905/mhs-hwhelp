@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}Questions & Answers{% endblock %}
+
+{% block content %}
+      <div class="page-header">
+        <br>
+        <h1 class='display-4 ' style="color: #ffffff;">Click to Delete</h1>
+      </div>
+      <br>
+      <div class="row">
+        {% for question in questions %}
+        <div class="col-lg-12">
+          <div class="list-group list-group-flush">
+
+              <a href="{{ url_for('main.delete_ques', question_id=question.id) }}" class="list-group-item list-group-item-action">
+                <h3 class="list-group-item-heading"  style="color: #ffffff;">{{ question.question }}</h3>
+                <h5 class="list-group-item-text"  style="color: #ffffff;">Asked by:  {{ question.asker.name }}</h5>
+                <h5 class="list-group-item-text" style="color: #ffffff;">Answered by:  {{ question.expert.name }}</h5>
+              </a>
+
+          </div>
+        </div><!-- /.col-lg-12 -->
+        {% endfor %}
+      </div>
+<style>
+
+[class|="list-group-item list-group-item-action"]:hover {
+  cursor: pointer;
+  background-color: #00bb19;";
+}
+
+[class|="list-group-item list-group-item-action"]{
+  background-color: #4e5d6c;
+  transition: 0.3s;
+}
+
+
+[class|="col-lg-12"]:hover {
+  cursor: pointer;
+  background-color: #00bb19;";
+}
+
+[class|="col-lg-12"]{
+  background-color: #4e5d6c;
+  transition: 0.3s;
+}
+
+
+body {
+  background-color: black;
+}
+</style>
+{% endblock %}

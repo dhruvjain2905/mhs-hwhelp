@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %}Answer Question{% endblock %}
+
+{% block content %}
+
+
+<center>
+<br>
+      <div class="page-header">
+        <h1 class="display-5" style="color: #ffffff;"> {{ question.question }}</h1>
+      </div>
+
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="well bs-component">
+              <form class="form-horizontal" method="POST" action="{{ url_for('main.answer', question_id=question.id) }}" enctype="multipart/form-data" >
+                <fieldset>
+                  <div class="form-group">
+                    <label for="textArea" class="col-lg-2 control-label" style="color: #ffffff;">Answer</label>
+                    <div class="col-lg-10">
+                      <textarea class="form-control" name="answer" rows="7" id="textArea"></textarea>
+                      {%if question.image_data%}
+                      <span class="help-block" style="color: #ffffff;">Download and upload files as needed!</span>
+                      {%else%}
+                      <span class="help-block" style="color: #ffffff;">Upload a file as needed!</span>
+                      {%endif%}
+                      <input class = "form-control" type="file" name="file">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <br>
+                    <div class="col-lg-10 col-lg-offset-2">
+                      <button type="submit" class="button button1">Submit</button>
+                      {%if question.image_data%}
+          <a href="{{ url_for('main.download', question_id=question.id) }}" class="button button1">Download Question File</a>
+        {%endif%}
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </center>
+
+    <style>
+      body {
+background-color: black;
+}
+
+.button {
+  background-color:#00bb19; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #00bb19;"
+  color: black; 
+
+}
+
+.button1:hover {
+  background-color: #ffffff;
+  color: #00bb19;
+}
+</style>
+
+{% endblock %}

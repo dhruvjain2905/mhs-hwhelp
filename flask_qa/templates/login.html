@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<br>
+      <form method="POST">
+        <h3 class="display-3" style="color: #ffffff;" align="center">Login</h3>
+        <div class="form-group">
+          <label style="color: #ffffff;"  for="email">Username</label>
+          <input
+            type="text"
+            id="inputName"
+            name="name"
+            class="form-control"
+            placeholder="Enter Username"
+          />
+          <br>
+          <label style="color: #ffffff;" for="password">Password</label>
+          <input
+            type="password"
+            id="inputPassword"
+            name="password"
+            class="form-control"
+            placeholder="Enter Password"
+          />
+          <br />
+          <div align="center">
+            <button class="button button1" type="submit">Login</button>
+          </div>
+        </div>
+      </form>
+      <style>
+
+
+
+.button {
+  background-color:#00bb19; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #00bb19;"
+  color: black; 
+
+}
+
+.button1:hover {
+  background-color: #ffffff;
+  color: #00bb19;
+}
+
+
+.form-group label {
+  font-size: 20px;
+}
+        body {
+          background-color: black;
+        }
+
+
+
+        </style>
+<!--
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="well bs-component">
+              <form class="form-horizontal" method="POST" action="{{ url_for('auth.login') }}">
+                <fieldset>
+                  <div class="form-group">
+                    <label for="inputName" class="col-lg-2 control-label">Name</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" name="name" id="inputName" placeholder="Name">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                    <div class="col-lg-10">
+                      <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                      <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    -->
+{% endblock %}
+

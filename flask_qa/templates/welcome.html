@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<center>
+    <br>
+    <br>
+    <h1 align="center" style="color: white;"class="display-3">MHS Homework Help</h1>
+    <h1 align="center" style="color: white;" class="display-5">A collaborative platform for learning</h1>
+    <style>
+    body {background-color: #d3e7ff;}
+    </style>
+    <br/>
+    <br/>
+    <div class="row no-gutters bg-light position-relative">
+        <div class="col-md-6 mb-md-0 p-md-4">
+          <img src="https://bloximages.chicago2.vip.townnews.com/thesunchronicle.com/content/tncms/assets/v3/editorial/8/41/8419659a-3bca-5bcd-900e-964340fb2495/5f88afcc7d07b.image.jpg?resize=817%2C500" class="w-100">
+        <!--https://st2.depositphotos.com/1518767/7635/i/950/depositphotos_76352761-stock-photo-overhead-shot-of-laptop-and.jpg-->
+        </div>
+        <div class="col-md-6 position-static p-4 pl-md-0">
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+          <h5  class = "display-6" style="color: white;">Let us learn together.</h5>
+          <p  style="color: white;">School can be challenging. Through this website, you can help your classmates by asking and answering your own questions. Sign up to get started on your collaborative learning journey.</p>
+          <a href="/login" class="button button1">Login</a>
+          <a href="/register" class="button button1">Sign Up</a>
+          <a href="/home" class="button button1">View Previous Questions</a>
+        </div>
+      </div>
+    
+
+  
+
+
+      <style>
+[class|="col-md-6 position-static p-4 pl-md-0"]{
+  background-color: #4e5d6c;
+  transition: 0.3s;
+}
+
+[class|="col-md-6 mb-md-0 p-md-4"]{
+  background-color: #4e5d6c;
+  transition: 0.3s;
+}
+
+        body {
+  background-color: black;
+}
+
+.button {
+  background-color:#00bb19; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #00bb19;"
+  color: black; 
+
+}
+
+.button1:hover {
+  background-color: #ffffff;
+  color: #00bb19;
+}
+</style>
+
+{% endblock %}
