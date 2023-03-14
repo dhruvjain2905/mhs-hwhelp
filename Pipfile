@@ -11,6 +11,7 @@ flask-sqlalchemy = "*"
 flask-login = "*"
 python-dotenv = "*"
 gunicorn = "*"
+typing-extensions = "*"
 
 [requires]
 python_version = "3.11.2"
