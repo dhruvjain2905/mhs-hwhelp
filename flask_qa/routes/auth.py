@@ -28,7 +28,7 @@ def register():
             if name == "MHS":
                 user = User(
                     name=name, 
-                    unhashed_password=unhashed_password,
+                    password=unhashed_password,
                     admin=True,  
                     expert=False
                 )
@@ -38,7 +38,7 @@ def register():
             else:
                 user = User(
                     name=name, 
-                    unhashed_password=unhashed_password,
+                    password=unhashed_password,
                     admin=False,  
                     expert=False
                 )
@@ -62,7 +62,7 @@ def login():
 
         error_message = ''
 
-        if not user or not check_password_hash(user.password, password):
+        if not user or not user.password == password:
             flash('Could not login. Please check and try again.', category='error')
         else:
             login_user(user)

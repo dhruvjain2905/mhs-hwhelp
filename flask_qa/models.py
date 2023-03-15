@@ -24,13 +24,13 @@ class User(UserMixin, db.Model):
         lazy=True
     )
 
-    @property
-    def unhashed_password(self):
-        raise AttributeError('Cannot view unhashed password!')
+   # @property
+   # def unhashed_password(self):
+    #    raise AttributeError('Cannot view unhasshed password!')
 
-    @unhashed_password.setter
-    def unhashed_password(self, unhashed_password):
-        self.password = generate_password_hash(unhashed_password)
+    #@unhashed_password.setter
+   # def unhashed_password(self, unhashed_password):
+    #    self.password = generate_password_hash(unhashed_password)
 
 class Question(db.Model):
     id = db.Column(db.Integer, primary_key=True)
