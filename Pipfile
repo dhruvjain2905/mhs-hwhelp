@@ -12,6 +12,7 @@ flask-login = "*"
 python-dotenv = "*"
 gunicorn = "*"
 typing-extensions = "*"
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.11.2"
