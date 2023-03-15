@@ -80,12 +80,12 @@ def question(question_id):
 @main.route('/download/<int:question_id>')
 def download(question_id):
     im = Question.query.filter_by(id=question_id).first()
-    return send_file(BytesIO(im.image_data), attachment_filename=im.image_filename, as_attachment=True)
+    return send_file(BytesIO(im.image_data), download_name=im.image_filename, as_attachment=True)
 
 @main.route('/ans_download/<int:question_id>')
 def ans_download(question_id):
     im = Question.query.filter_by(id=question_id).first()
-    return send_file(BytesIO(im.ans_data), attachment_filename=im.ans_filename, as_attachment=True)
+    return send_file(BytesIO(im.ans_data), download_name=im.ans_filename, as_attachment=True)
 
 
 @main.route('/unanswered')
