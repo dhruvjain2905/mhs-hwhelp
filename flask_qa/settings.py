@@ -1,5 +1,5 @@
 import os 
 
-SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+SQLALCHEMY_DATABASE_URI = "postgres://jiyyjuknvksgvj:c924358cade51ce47f4bb49b035e719b8028ae514d6ebf8e37708d5373694dbe@ec2-3-208-74-199.compute-1.amazonaws.com:5432/dkbv7b3uchocu"
 SECRET_KEY = os.environ.get('SECRET_KEY')
 SQLALCHEMY_TRACK_MODIFICATIONS = False
