@@ -13,6 +13,7 @@ python-dotenv = "*"
 gunicorn = "*"
 typing-extensions = "*"
 psycopg2-binary = "*"
+registry = "*"
 
 [requires]
 python_version = "3.11.2"
