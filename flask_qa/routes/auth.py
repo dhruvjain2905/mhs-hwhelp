@@ -20,9 +20,9 @@ def register():
             flash('Username is already in use. Please try something different', category='error')
         elif confirm_pass != unhashed_password:
             flash("Passwords are different! Please enter the same password.", category='error')
-        elif len(name) < 1:
+        elif len(name) < 4:
             flash('Username is too short. Must be at least 4 characters.', category='error')
-        elif len(unhashed_password) < 1:
+        elif len(unhashed_password) < 4:
             flash('Password is too short. Must be at least 4 characters', category='error')
         else:
             if name == "MHS":
